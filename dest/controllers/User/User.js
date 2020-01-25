@@ -14,6 +14,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var CrudController_1 = require("../CrudController");
+var constants_1 = require("../../config/constants");
 var UserController = /** @class */ (function (_super) {
     __extends(UserController, _super);
     function UserController() {
@@ -23,7 +24,8 @@ var UserController = /** @class */ (function (_super) {
         throw new Error("Method not implemented.");
     };
     UserController.prototype.read = function (req, res) {
-        res.json({ message: 'GET /user request received. Many thanks!' });
+        //Not the use of backticks `` in the below string to support interpolation!
+        res.json({ message: "GET /user request received. Many thanks, " + constants_1.DADOU_NAME + "! " });
     };
     UserController.prototype.update = function (req, res) {
         throw new Error("Method not implemented.");
